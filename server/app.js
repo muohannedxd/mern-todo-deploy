@@ -11,6 +11,15 @@ const URI = process.env.MONGO_URI
 // express app
 const app = express()
 
+// vercel
+app.use(cors(
+  {
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+))
+
 /**
  * this middleware allow us to pass data to our request and
  * access it through the req.body
