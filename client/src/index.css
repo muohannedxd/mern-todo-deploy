@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  @apply bg-[#f6f6f6];
+}
+
+.Todo {
+  @apply bg-white shadow-xl shadow-slate-400 rounded-xl min-w-[800px]
+      md:min-w-[600px] sm:min-w-[500px];
+}
+@media (max-width: 600px) {
+  .Todo {
+    @apply min-w-[350px];
+  }
+}
+
+input {
+  @apply py-2 px-4 border-2 border-slate-300 focus:outline-none focus:border-add
+      rounded-lg;
+}
+
+input:first-child {
+  @apply w-[60%] sm:w-[100%];
+}
+
+/*navlink*/
+.navLink {
+  @apply text-base hover:font-semibold;
+}
+
+/*active navlink*/
+.active {
+  @apply border-b-2 border-slate-500 font-semibold;
+}
+
+/*signup & login*/
+.auth-btn {
+  @apply text-white font-semibold px-10 py-2 rounded-lg cursor-pointer
+      my-4 mx-auto;
+}
+
+.logout-btn {
+  @apply border-2 border-black rounded-md font-semibold px-4 
+  hover:bg-gray-800 hover:text-white transition-all duration-200 cursor-pointer
+}
+
+.error-msg-auth {
+  @apply text-red-500 flex text-sm mt-[-12px]
+}
